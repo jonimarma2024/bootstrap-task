@@ -1,13 +1,635 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Task</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Task</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container-fluid">
+        <img src="picture/logo.png" alt="" class="img-fluid" width="40px" height="40px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <form class="d-flex" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="search" aria-label="search"
+                  aria-describedby="basic-addon1">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div>
+            </form>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginmodel"><i
+                  class="fa-solid fa-user"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupmodel">Sign Up</a>
+
+
+              <!-- login-Modal -->
+              <div class="modal fade" id="loginmodel" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Log in Form</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address/User Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                          placeholder="name@example.com/user name">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">password</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput2"
+                          placeholder="password">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- signup-Modal -->
+              <div class="modal fade" id="signupmodel" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up Form</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address/User Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                          placeholder="name@example.com/user name">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Confirm your password</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput2"
+                          placeholder="password">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Slider -->
+  <div class="container-fluid py-5">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="picture/slider/slider-1.png" class="d-block w-100" alt="" height="1300vh" class="img-fluid">
+        </div>
+        <div class="carousel-item">
+          <img src="picture/slider/slide-2.png" class="d-block w-100" alt="" height="1300h" class="img-fluid">
+        </div>
+        <div class="carousel-item">
+          <img src="picture/slider/slide-3.png" class="d-block w-100" alt="" height="1300vh" class="img-fluid">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Our Services -->
+  <div class="container py-5">
+    <h1 class="text-center">Our Services</h1>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-md-6 row align-items-center">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest Products -->
+  <div class="container">
+    <h1 class="text-center">Latest Products</h1>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+    <div class="container">
+      <div class="row">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="picture/slider/Apple-Watch-PNG-Pic.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Premium watch</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the card's content.</p>
+                <p> offer Price 1200 <del class="text-danger">Regular Price : 150</del></p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="new-img" src="picture/slider/slide-3.png" alt="">
+      </div>
+
+      <div class="col-md-6">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Branding & Identity Design #1
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                the collapse plugin adds the appropriate classes that we use to style each element.
+                These classes control the overall appearance, as well as the showing and hiding via CSS
+                transitions. You can modify any of this with custom CSS or overriding our default
+                variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Marketing & Advertising Design #2
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and hiding
+                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Web & UI/UX Design #3
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                the collapse plugin adds the appropriate classes that we use to style each element.
+                These classes control the overall appearance, as well as the showing and hiding via CSS
+                transitions. You can modify any of this with custom CSS or overriding our default
+                variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapseTwo">
+                Print & Publication Design #4
+              </button>
+            </h2>
+            <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and hiding
+                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseTwo">
+                Packaging & Label Design #5
+              </button>
+            </h2>
+            <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and hiding
+                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseTwo">
+                Motion Graphics & Animation #6
+              </button>
+            </h2>
+            <div id="collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and hiding
+                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                default variables. It's also worth noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Newslaterr -->
+  <div class="newsslaterr py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4">
+          <p>Sign Up For joining With us</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p>Thank You For With Us</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <form class="d-flex" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="search" aria-label="search"
+                aria-describedby="basic-addon1">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <div class="mt-5 bg-dark text-white">
+    <div class="container py-5">
+      <div class="row">
+        
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <p>E-learning & Earning ltd
+            <br>Address: East Kalindipur, Rangamati, Bangaldesh.
+            <br>Phone: 01712345678
+            <br>Email:info@e-laerangamati.com
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h5>About</h5>
+          <ul class="list-unstyled">
+            <li>About Us</li>
+            <li>Delivery</li>
+            <li>Information</li>
+            <li>Information</li>
+            <li>Information</li>
+            <li>
+            <li>Information</li>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-3">
+          <h5>My Account</h5>
+          <ul class="list-unstyled">
+            <li>My Account</li>
+            <li>View cart</li>
+            <li>My Account</li>
+            <li>Track My Order</li>
+            <li>My Account</li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Install App</h5>
+          <ul class="list-unstyled">
+            <li>From App Store or Google Play</li>
+          </ul>
+          <div>
+            <img src="picture/slider/App store.webp" alt="">
+          </div>
+          <div>
+            <img class="mt-2" src="picture/slider/Google Play.webp" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+
 </html>

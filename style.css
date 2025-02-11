@@ -1,0 +1,21 @@
+.newsslaterr {
+    background-color: #adccc5;
+}
+.newsslaterr p {
+    margin: 0;
+}
+@media only screen and (max-width: 600px) {
+    .new-img {
+        width: 100%;
+    }
+  }
+
+  .text-size {
+    font-size: 50px;
+  }
+  .navbar{
+   background-color: #379489;
+  }
+  .navbar *{
+    color: white !important;
+   }
